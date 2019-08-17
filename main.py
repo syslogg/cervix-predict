@@ -14,7 +14,7 @@ import utils
 
 #plot the first image in the dataset
 plt.imshow(X_train[0])
-
+    
 #check image shape
 X_train[0].shape
 
