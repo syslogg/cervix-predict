@@ -50,3 +50,4 @@ for i, row in df.head(30).iterrows():
 def mount_neural_network():
     cnn = Sequential()
     cnn.add(Conv2D())
+    return cnn

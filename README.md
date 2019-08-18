@@ -28,3 +28,8 @@ Será utilizado banco de imagem com dataset convertido
 8. Conclusão
 9. Referências Bibliográficas
 10. Anexos
+
+## 3. Estudos Sobre o Keras
+### Parametros sobre o a função ``Conv2D``
+- **filters**: Quantidade de kernels que será aprendido naquela camada de convolução
+- **kernel_size**: Tamanho da matriz do kernel (Para CONV2D, tem que ser representado por uma tupla)
