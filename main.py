@@ -19,6 +19,15 @@ import utils
 # Link: https://medium.com/nybles/create-your-first-image-recognition-classifier-using-cnn-keras-and-tensorflow-backend-6eaab98d14dd
 # Link: https://www.pyimagesearch.com/2018/12/31/keras-conv2d-and-convolutional-layers/
 
+# Problema de dataset com matrizes diferentes
+# https://datascience.stackexchange.com/questions/40462/how-to-prepare-the-varied-size-input-in-cnn-prediction
+
+# Pegar imagens do arquivos para as pastas
+# https://medium.com/@vijayabhaskar96/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720
+
+# Para um dataset com tamanhos de imagens variaveis tem quqe usar uma camada de SSPNet.
+# Uso SSPNet com Keras: https://github.com/yhenon/keras-spp
+
 # Leitura do banco de imagem
 df = pd.read_csv('ds.csv')
 
@@ -32,7 +41,7 @@ df['diagnostic'].value_counts()
 herlev_ds = []
 for i, row in df.head(30).iterrows():
     img = np.array(Image.open(row[0]))
-    herlev_ds = np.append(herlev_ds, [img, row[1]])
+    herlev_ds = np.append(herlev_ds, row[1])
 
 #herlev_ds = np.append(herlev_ds)
 
