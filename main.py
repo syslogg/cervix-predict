@@ -15,18 +15,6 @@ import pandas as pd
 from PIL import Image
 import utils
 
-# Link: https://keras.io/examples/conv_filter_visualization/
-# Link: https://medium.com/nybles/create-your-first-image-recognition-classifier-using-cnn-keras-and-tensorflow-backend-6eaab98d14dd
-# Link: https://www.pyimagesearch.com/2018/12/31/keras-conv2d-and-convolutional-layers/
-
-# Problema de dataset com matrizes diferentes
-# https://datascience.stackexchange.com/questions/40462/how-to-prepare-the-varied-size-input-in-cnn-prediction
-
-# Pegar imagens do arquivos para as pastas
-# https://medium.com/@vijayabhaskar96/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720
-
-# Para um dataset com tamanhos de imagens variaveis tem quqe usar uma camada de SSPNet.
-# Uso SSPNet com Keras: https://github.com/yhenon/keras-spp
 
 # Leitura do banco de imagem
 df = pd.read_csv('ds.csv')
@@ -49,5 +37,5 @@ for i, row in df.head(30).iterrows():
 
 def mount_neural_network():
     cnn = Sequential()
-    cnn.add(Conv2D())
+    cnn.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(None, None, 3)))
     return cnn

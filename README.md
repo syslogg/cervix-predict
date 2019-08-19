@@ -30,6 +30,28 @@ Será utilizado banco de imagem com dataset convertido
 10. Anexos
 
 ## 3. Estudos Sobre o Keras
-### Parametros sobre o a função ``Conv2D``
+### Parametros sobre a função ``Conv2D``
 - **filters**: Quantidade de kernels que será aprendido naquela camada de convolução
 - **kernel_size**: Tamanho da matriz do kernel (Para CONV2D, tem que ser representado por uma tupla)
+- **strides**: Tupla de valores que vai ter de espaçamento para a ``feature map``. Default (1,1)
+- **padding**: Aceita valores de ``valid`` ou ``same``. ``valid`` caso queira reduzir a dimensões da entrada. ``same`` para manter as mesmas dimensões da entrada.
+- **data_format**: Aceita valores ``channels_last`` que os canais das imagens estão por ultimo no dataset e ``channels_first`` que os canais vem primeiro no dataset.
+
+
+## Links
+
+- https://keras.io/examples/conv_filter_visualization/
+- https://medium.com/nybles/create-your-first-image-recognition-classifier-using-cnn-keras-and-tensorflow-backend-6eaab98d14dd
+- https://www.pyimagesearch.com/2018/12/31/keras-conv2d-and-convolutional-layers/
+
+- [Problema de dataset com matrizes diferentes](https://datascience.stackexchange.com/questions/40462/how-to-prepare-the-varied-size-input-in-cnn-prediction)
+
+- [Pegar imagens do arquivos para as pastas](https://medium.com/@vijayabhaskar96/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720)
+
+- [Para um dataset com tamanhos de imagens variaveis tem quqe usar uma camada de SSPNet. Uso SSPNet com Keras.](https://github.com/yhenon/keras-spp)
+
+- [Basic of Convolution](https://www.pyimagesearch.com/2016/07/25/convolutions-with-opencv-and-python/)
+
+- https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
+
+- https://www.pyimagesearch.com/2018/12/31/keras-conv2d-and-convolutional-layers/
