@@ -55,3 +55,5 @@ Será utilizado banco de imagem com dataset convertido
 - https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
 
 - https://www.pyimagesearch.com/2018/12/31/keras-conv2d-and-convolutional-layers/
+
+- [Explicação de Ativações: Tanh, Relu e Sigmoid](https://towardsdatascience.com/exploring-activation-functions-for-neural-networks-73498da59b02)
