@@ -14,28 +14,35 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import utils
+from network import NeuralNetwork
 
+BATCH_SIZE_HERLEV = 917
 
 # Leitura do banco de imagem
-df = pd.read_csv('ds.csv')
 
 # -=== Estudo sobre o Banco de Imagem Herlev ===-
 
+# -=== Trabalhar com Data Augmentation ===-
+
+train_datagen = ImageDataGenerator(rescale=1./255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True)
+
+train_datagen.flow_from_directory(
+    directory=r'./dataset/herlev',
+    target_size=(250, 250),
+    batch_size=32,
+    color_mode='rgb',
+    class_mode='categorical',
+    seed=1,
+    shuffle=True
+)
+
 # - Quantidade de imagens para cada valor:
 
-df['diagnostic'].value_counts()
-
 # 1. Montagem do Dataset
-herlev_ds = []
-for i, row in df.head(30).iterrows():
-    img = np.array(Image.open(row[0]))
-    herlev_ds = np.append(herlev_ds, row[1])
 
-#herlev_ds = np.append(herlev_ds)
+
 
 # 2. Montagem da Rede Neural Convolucional
 
-def mount_neural_network():
-    cnn = Sequential()
-    cnn.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(None, None, 3)))
-    return cnn
+model = NeuralNetwork.build(32,10)
+model.compile(loss='categorical_crossentropy', optimizer='sgd')

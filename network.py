@@ -1,6 +1,6 @@
 from keras.utils import to_categorical
 from keras.models import Sequential
-from spp.SpatialPyramidPooling import SpatialPyramidPooling
+#import SpatialPyramidPooling
 
 # Layers
 from keras.layers import Dense
@@ -26,6 +26,6 @@ class NeuralNetwork:
         # Passo 4: Exibir saida com uma camada totalmente conectada (Fully-Connected)
         cnn.add(Dense(num_class))
         cnn.add(Activation('softmax'))
-        cnn.add(SpatialPyramidPooling([1, 2, 4])) # Pesquisar sobre
+        #cnn.add(SpatialPyramidPooling([1, 2, 4])) # Pesquisar sobre
 
         return cnn
