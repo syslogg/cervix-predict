@@ -57,3 +57,11 @@ Será utilizado banco de imagem com dataset convertido
 - https://www.pyimagesearch.com/2018/12/31/keras-conv2d-and-convolutional-layers/
 
 - [Explicação de Ativações: Tanh, Relu e Sigmoid](https://towardsdatascience.com/exploring-activation-functions-for-neural-networks-73498da59b02)
+
+- [Basico sobre Keras](https://towardsdatascience.com/building-a-convolutional-neural-network-cnn-in-keras-329fbbadc5f5)
+
+- [Por que não se deve usar k-fold com CNN](https://datascience.stackexchange.com/questions/47797/using-cross-validation-technique-for-a-cnn-model/47799)
+
+- [Possivel Solucao usando k-fold](https://datascience.stackexchange.com/questions/37009/k-fold-cross-validation-when-using-fit-generator-and-flow-from-directory-in-ke?rq=1)
+
+- [Utilizar o ImageGenerator](https://www.pyimagesearch.com/2018/12/24/how-to-use-keras-fit-and-fit_generator-a-hands-on-tutorial/)

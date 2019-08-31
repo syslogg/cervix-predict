@@ -14,12 +14,15 @@ class NeuralNetwork:
         cnn = Sequential()
 
         # Passo 1: Criar Camada Convolucional
-        cnn.add(Conv2D(num_filter, kernel_size=(3, 3), input_shape=(None, None, 3)))
-        cnn.add(Activation('relu'))
+        cnn.add(Conv2D(num_filter, kernel_size=(3, 3), activation='relu',input_shape=(250, 250, 3)))
 
         # Passo 2: Efetuar o MaxPooling
         cnn.add(MaxPool2D())
-
+        
+        num_filter = num_filter * 2
+        cnn.add(Conv2D(num_filter, kernel_size=(3, 3), activation='relu',input_shape=(250, 250, 3)))
+        cnn.add(MaxPool2D())
+        
         # Passo 3: Flatten as saidas da camada convolucional
         cnn.add(Flatten())
 
